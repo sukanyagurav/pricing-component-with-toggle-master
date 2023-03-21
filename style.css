@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+*,*::before,*::after{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+:root
+{
+    --light-gray-blue:hsl(240, 78%, 98%);
+    --light-gray-blue-2:hsl(234, 14%, 74%);
+    --gray-blue:hsl(233, 13%, 49%);
+    --dark-gray-blue:hsl(232, 13%, 33%);
+}
+body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    font-family: 'Montserrat', sans-serif;
+    padding:2rem;
+    font-weight:700;
+    color:var(--gray-blue);
+    background-color:var(--light-gray-blue);
+}
+ul{
+    list-style:none;
+}
+main{
+    
+    margin:5rem auto;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+h1{
+    font-size:2.5rem;
+    color:var(--gray-blue);
+}
+.container{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:2rem;
+}
+.planning__card{
+    width:23rem;
+    max-width:100%;
+    padding:2rem;
+    display:flex;
+    flex-direction:column;
+   
+    gap:2rem;
+    box-shadow: 0 5px 8px rgb(0 0 0 / 9%);
+  background-color:white;
+  border-radius:10px;
+}
+
+.planning__card:nth-child(even){
+    background-image:linear-gradient(to right,hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    
+}
+
+.planning__card .plan__name{
+    font-size:1.2rem;
+    color:var(--gray-blue);
+}
+h2 {
+   color:var(--dark-gray-blue);
+   font-size:1.8rem;
+   display:flex;
+   align-items:center;
+   justify-content:Center;
+   gap:0.5rem;
+}
+h2 span{
+    font-size:3rem;
+}
+.professional .plan__name,
+.professional h2,
+.professional .plan-details 
+ {
+    color:#fff;
+}
+.plan-details{
+    display:flex;
+    flex-direction:column;
+
+}
+.plan-details li{
+  padding:1rem 0;
+  border-top:0.05rem solid var(--light-gray-blue-2);
+}
+.btn{
+    display:inline-block;
+    padding:1rem 2rem;
+    color:var(--light-gray-blue);
+    background-image:linear-gradient(to right,hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-weigt:800;
+    font-size:inherit;
+    font-family:inherit;
+}
+.planning__card:nth-child(even) .btn{
+ 
+    background-image:none;
+    background-color:#fff;
+
+    color:hsl(236, 72%, 79%);
+}
+
+.btn:hover{
+    
+}
+.attribution{
+    padding:1rem;
+   color:hsl(237, 63%, 64%);
+   font-size:1.2rem;
+}
+.attribution a{
+    text-decoration:none;
+    color:inherit;
+    
+}
+@media(min-width:750px){
+    body{
+        padding:0.8rem;
+    }
+    .container{
+        flex-direction:row;
+        gap:1rem;
+    }   
+}
+@media(min-width:950px){
+    .container{
+        flex-wrap:nowrap;
+        gap:0;
+    }
+    .planning__card:first-child{
+        border-top-right-radius:0;
+        border-bottom-right-radius:0;
+    }
+    .planning__card:last-child{
+        border-top-left-radius:0;
+        border-bottom-left-radius:0;
+    }
+    .planning__card:nth-child(even){
+        padding:3rem 2rem;
+    }
+}
