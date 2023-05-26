@@ -38,6 +38,70 @@ h1{
     font-size:2.5rem;
     color:var(--gray-blue);
 }
+.selectPlan{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:1rem 0;
+    
+}
+.toggle {
+    visibility: hidden;
+    width:0;
+}
+.label{
+    background-color:hsl(236, 72%, 79%);
+    border-radius:50px;
+    width:7rem;
+    height:3rem;
+    cursor:pointer;
+    margin:0 15px 0;
+    display:inline-block;
+    position:relative;
+}
+.toggle:checked + .label{
+    background-color:hsl(237, 63%, 64%);
+}
+.ball{
+    background:#fff;
+    height:38px;
+    width:38px;
+    border-radius:50%;
+    position:absolute;
+    top:5px;
+    left:5px;
+    animation: slideOff 0.3s linear forwards;
+}
+.toggle:checked + .label .ball{
+    animation: slideOn 0.3s linear forwards;
+}
+.toggle:checked ~ .month{
+    color:hsl(237, 63%, 64%);
+}
+
+@keyframes slideOn {
+    0% {
+      transform: translateX(0) scale(1);
+    }
+    50% {
+      transform: translateX(20px) scale(1.2);
+    }
+    100% {
+      transform: translateX(65px) scale(1);
+    }
+  }
+  
+  @keyframes slideOff {
+    0% {
+      transform: translateX(65px) scale(1);
+    }
+    50% {
+      transform: translateX(20px) scale(1.2);
+    }
+    100% {
+      transform: translateX(0) scale(1);
+    }
+  }
 .container{
 
     display:flex;
@@ -79,7 +143,9 @@ h2 {
 }
 h2 span{
     font-size:3rem;
+    
 }
+
 .professional .plan__name,
 .professional h2,
 .professional .plan-details 
