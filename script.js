@@ -1,5 +1,5 @@
 const checkbox = document.getElementById("select")
-const prices = document.querySelectorAll('.planning__card #plan__price')
+const prices = document.querySelectorAll('.planning__card .plan__price')
 const annual = document.querySelector('.annual');
 checkbox.addEventListener("change",(e)=>{
     let gap=0;

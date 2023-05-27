@@ -111,7 +111,7 @@ main{
     display:flex;
     flex-direction:column;
     gap:2rem;
-    box-shadow: 0 5px 8px rgb(0 0 0 / 9%);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color:white;
     border-radius:10px;
     animation:grow var(--duration) both;
