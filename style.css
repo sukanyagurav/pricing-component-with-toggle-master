@@ -22,9 +22,11 @@ body{
     font-weight:700;
     color:var(--gray-blue);
     background-color:var(--light-gray-blue);
+    background: url(images/bg-bottom.svg);
+    background-position: bottom -5rem left -1.9rem;
+     background-repeat: no-repeat;
 }
-body::after,
-body::before{
+body::after{
     content:'';
     position:absolute;
     width: 100%;
@@ -37,15 +39,7 @@ body::after{
     background: url(images/bg-top.svg);
     background-position: right top;
     background-repeat: no-repeat;
-  
 }
-body::before{
-    bottom:0;
-    background: url(images/bg-bottom.svg);
-    background-position: left bottom;
-    background-repeat: no-repeat;
-}
-
 ul{
     list-style:none;
 }
