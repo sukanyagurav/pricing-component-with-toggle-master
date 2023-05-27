@@ -26,24 +26,24 @@ body{
 ul{
     list-style:none;
 }
+h1{
+    font-size:2.5rem;
+    color:var(--gray-blue);
+}
 main{
-    
+    max-width:100%;
     margin:5rem auto;
     text-align:center;
     display:flex;
     flex-direction:column;
     gap:2rem;
 }
-h1{
-    font-size:2.5rem;
-    color:var(--gray-blue);
-}
+/* select plan */
 .selectPlan{
     display:flex;
     align-items:center;
     justify-content:center;
-    margin:1rem 0;
-    
+    margin:1rem 0; 
 }
 .toggle {
     visibility: hidden;
@@ -78,32 +78,8 @@ h1{
 .toggle:checked ~ .month{
     color:hsl(237, 63%, 64%);
 }
-
-@keyframes slideOn {
-    0% {
-      transform: translateX(0) scale(1);
-    }
-    50% {
-      transform: translateX(20px) scale(1.2);
-    }
-    100% {
-      transform: translateX(65px) scale(1);
-    }
-  }
-  
-  @keyframes slideOff {
-    0% {
-      transform: translateX(65px) scale(1);
-    }
-    50% {
-      transform: translateX(20px) scale(1.2);
-    }
-    100% {
-      transform: translateX(0) scale(1);
-    }
-  }
+/* card section */
 .container{
-
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -117,16 +93,14 @@ h1{
     padding:2rem;
     display:flex;
     flex-direction:column;
-   
     gap:2rem;
     box-shadow: 0 5px 8px rgb(0 0 0 / 9%);
-  background-color:white;
-  border-radius:10px;
+    background-color:white;
+    border-radius:10px;
 }
 
 .planning__card:nth-child(even){
     background-image:linear-gradient(to right,hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
-    
 }
 
 .planning__card .plan__name{
@@ -142,8 +116,7 @@ h2 {
    gap:0.5rem;
 }
 h2 span{
-    font-size:3rem;
-    
+    font-size:3rem;  
 }
 
 .professional .plan__name,
@@ -155,7 +128,6 @@ h2 span{
 .plan-details{
     display:flex;
     flex-direction:column;
-
 }
 .plan-details li{
   padding:1rem 0;
@@ -174,17 +146,26 @@ h2 span{
     font-weigt:800;
     font-size:inherit;
     font-family:inherit;
+    transition:all 0.9s ease;
 }
 .planning__card:nth-child(even) .btn{
- 
     background-image:none;
     background-color:#fff;
-
     color:hsl(236, 72%, 79%);
+    transition:all 0.9s ease;
 }
 
 .btn:hover{
+    background-image:linear-gradient(180deg,hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    color:#fff;
+}
+.planning__card:nth-child(even) .btn:hover{
     
+    background-image:linear-gradient(180deg,hsl(233, 13%, 49%) , hsl(232, 13%, 33%));
+    color:#fff;
+}
+.btn:active{
+    transform:scale(1.1);
 }
 .attribution{
     padding:1rem;
@@ -196,6 +177,7 @@ h2 span{
     color:inherit;
     
 }
+/* media queries */
 @media(min-width:750px){
     body{
         padding:0.8rem;
@@ -220,5 +202,29 @@ h2 span{
     }
     .planning__card:nth-child(even){
         padding:3rem 2rem;
+    }
+}
+/*  slidon and off animation*/
+@keyframes slideOn {
+    0% {
+      transform: translateX(0) scale(1);
+    }
+    50% {
+      transform: translateX(20px) scale(1.2);
+    }
+    100% {
+      transform: translateX(65px) scale(1);
+    }
+  }
+  
+@keyframes slideOff {
+    0% {
+      transform: translateX(65px) scale(1);
+    }
+    50% {
+      transform: translateX(20px) scale(1.2);
+    }
+    100% {
+      transform: translateX(0) scale(1);
     }
 }
